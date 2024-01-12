@@ -1,0 +1,19 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    text-align: center;
+}
+
+header h1 {
+    color: darkgray;
+}
+
+header h4 {
+    color: blue;
+}
+
+header p {
+    color: darkkhaki;
+}
