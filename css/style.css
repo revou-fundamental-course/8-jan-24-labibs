@@ -41,6 +41,15 @@ body {
     display: block;
 }  
 
+.footer {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 2px;
+    /* background-color: blueviolet; */
+    display: block;
+}  
+
 .judul span {
     font-size: small;
 }
@@ -69,19 +78,19 @@ body {
 
 @keyframes merahBerjalan {
     0% {
-        border-color: red; /* Warna merah pada ujung kiri atas */
+        border-color: red; 
     }
     25% {
-        border-color: transparent transparent red transparent; /* Warna merah menuju kanan atas */
+        border-color: transparent transparent red transparent; 
     }
     50% {
-        border-color: transparent transparent transparent red; /* Warna merah menuju kanan atas dan bawah */
+        border-color: transparent transparent transparent red;
     }
     75% {
-        border-color: red transparent transparent transparent; /* Warna merah menuju kanan atas, bawah, dan kiri */
+        border-color: red transparent transparent transparent; 
     }
     100% {
-        border-color: red; /* Kembali ke warna merah pada ujung kiri atas */
+        border-color: red; 
     }
 }
 
