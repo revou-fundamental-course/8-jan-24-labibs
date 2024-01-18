@@ -7,21 +7,67 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
+    <header><div class="judul"><h3>Katik <span>Kalkulator Matematik</span></h3></div></header>
     <div class="background">
         <div class="container">
-            <div class="card">
-                <div class="judul"><h3>Katik <span>Kalkulator Matematik</span></h3></div>
+            <div class="card">  
                 <div class="gambar">
                     <div class="persegi">
                         <div class="a">A</div>
                         <div class="b">B</div>
+                        <div id="result"></div>
                         <div class="c">C</div>
                         <div class="d">D</div>
                     </div>
                 </div>
-                <div class="kalkulator">Kalkulator</div>
+                <div class="kalkulator">
+                    <div class="card-kalkulator">
+                        <div class="atur-komponen">
+                            <div class="inputan">
+                                <input type="number" id="layar" readonly>
+                            </div>
+                            <hr>
+                            <div class="tombol-baris1">
+                                <button class="dobel luas" id="hitung-luas">Luas</button>
+                                <button class="dobel keliling" id="hitung-keliling">Keliling</button>
+                            </div>
+                            <div class="tombol-baris2">
+                                <button class="dobel hapus" id="reset">AC</button>
+                                <button class="hapus" id="hapus">C</button>
+                                <button class="symbol">:</button>
+                            </div>
+                            <div class="tombol-baris3">
+                                <button class="angka" value="7">7</button>
+                                <button class="angka" value="8">8</button>
+                                <button class="angka" value="9">9</button>
+                                <button class="symbol">x</button>
+                            </div>
+                            <div class="tombol-baris4">
+                                <button class="angka" value="4">4</button>
+                                <button class="angka" value="5">5</button>
+                                <button class="angka" value="6">6</button>
+                                <button class="symbol">-</button>
+                            </div>
+                            <div class="tombol-baris5">
+                                <button class="angka" value="1">1</button>
+                                <button class="angka" value="2">2</button>
+                                <button class="angka" value="3">3</button>
+                                <button class="symbol">+</button>
+                            </div>
+                            <div class="tombol-baris6">
+                                <button class="dobel angka" value="0">0</button>
+                                <button class="angka">.</button>
+                                <button class="symbol">=</button> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+    <footer>
+        <div class="judul"><h3>Katik <span>Kalkulator Matematik</span></h3></div>
+    </footer>
+    <script src="js/index.js"></script>
 </body>
 </html>

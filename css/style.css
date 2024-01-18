@@ -21,25 +21,22 @@ body {
 
 .card {
     width: 850px;
-    background: #fff;
+    background: hwb(246 53% 7%);
     border-radius: 10px;
     overflow: hidden;
     justify-content: center;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
     display: flex;
     flex-wrap: wrap;
- 
-    padding: 40px 10px 40px 10px;
+    margin: 20px 1px 20px 1px;
+    padding: 10px 3px 10px 3px;
   
   }
 
 .judul {
     width: 100%;
     text-align: center;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
+    padding-top: 2px;
     /* background-color: blueviolet; */
     display: block;
 }  
@@ -50,35 +47,168 @@ body {
 
 .gambar {
     width: 316px;
-    background-color: aqua;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin: 10px 20px 10px 20px;
 }
 
 .persegi {
     width: 150px;
     height: 150px;
-    border-color: black;
+    position: relative;
+    border-color: white;
     border-style: solid;
-    border-width: 1px;
+    border-width: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    animation: merahBerjalan 5s infinite linear;
 }
 
-.persegi .a {
-    top: 0;
-    left: 0;
+@keyframes merahBerjalan {
+    0% {
+        border-color: red; /* Warna merah pada ujung kiri atas */
+    }
+    25% {
+        border-color: transparent transparent red transparent; /* Warna merah menuju kanan atas */
+    }
+    50% {
+        border-color: transparent transparent transparent red; /* Warna merah menuju kanan atas dan bawah */
+    }
+    75% {
+        border-color: red transparent transparent transparent; /* Warna merah menuju kanan atas, bawah, dan kiri */
+    }
+    100% {
+        border-color: red; /* Kembali ke warna merah pada ujung kiri atas */
+    }
+}
+
+.a, .b, .c, .d {
+    position: absolute;
+    color: rgb(242, 243, 246);
+}
+
+.a {
+    top: -30px;
+    left: -30px;
+}
+
+.b {
+    top: -30px;
+    right: -30px; 
+}
+
+.d {
+    bottom: -30px; 
+    left: -30px;
+}
+
+.c {
+    bottom: -30px; 
+    right: -30px; 
+}
+
+#result {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: rgb(242, 243, 246);
+    font-weight: bold;
+    transform: translate(-50%, -50%);
+    /* Ini akan memposisikan elemen di tengah-tengah parent (div.persegi) */
 }
 
 .kalkulator {
     width: 290px;
-    background-color: aquamarine;
+    padding: 10px 10px 10px 10px;
+}
+
+.card-kalkulator {
+    background-color:rgb(242, 243, 246);
+    border-radius: 10px;
+    width: 280px;
+    height: 470px;
+    padding: 20px 20px 20px 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+.atur-komponen input{
+    width: 250px;
+    height: 50px;
+    font-family: Arial, sans-serif; 
+    font-size: 20px;
+    font-weight: bold;
+    color: #877af3;
+    border-radius: 50px;
+    margin-bottom: 10px;
+    border-style: none;
+    padding: 5px 15px 5px 15px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.atur-komponen button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    margin: 8px;
+    border-style: none;
+    font-family: Arial, sans-serif; 
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.atur-komponen button:hover {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.atur-komponen button:active {
+    transform: scale(0.95); 
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); 
+}
+
+.atur-komponen button.dobel {
+    width: 119px;
+}
+
+.atur-komponen button.symbol {
+    background-color: #877af3;
+    color: azure;
+}
+
+.atur-komponen button.angka {
+    color: #877af3;
+    
+}
+
+.atur-komponen button.hapus {
+    background-color: #ea3a3a;
+    color: azure;
+}
+
+.atur-komponen button.luas {
+    
+    color: #877af3;
+}
+
+.atur-komponen button.keliling {
+    
+    color: #877af3;
 }
 
 @media (max-width: 992px) {
 .card {
-    width: 500px;
+    width: 600px;
+    height: 100%;
     padding: 50px 50px 50px 50px;
 }
 
 .gambar {
     width: 35%;
+    height: 80vh;
+    align-items: center;
+    justify-content: left;
 }
 
 .kalkulator {
@@ -89,11 +219,16 @@ body {
 @media (max-width: 768px) {
 .card {
     width: 350px;
-    padding: 50px 50px 50px 50px;
+    height: 500px;
+    padding: 5px 50px 50px 50px;
+    overflow: auto;
 }
 
 .gambar {
     width: 100%;
+    height: 40vh;
+    align-items: center;
+    justify-content: center;
 }
 
 .kalkulator {
